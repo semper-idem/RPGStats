@@ -145,7 +145,7 @@ public class RPGStats implements ModInitializer {
                     currentLevel += 1;
                     
                     setComponentLevel(id, player, currentLevel);
-                    player.sendMessage(new LiteralText("§aRPGStats >§r ")
+                    player.sendMessage(new LiteralText("§2[Skills]§r ")
                         .formatted(Formatting.GREEN)
                         .append(new TranslatableText("rpgstats.levelup_1")
                             .formatted(Formatting.WHITE)

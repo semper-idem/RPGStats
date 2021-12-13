@@ -60,6 +60,8 @@ public class RPGStatsConfig implements ConfigData {
         public int addAmount = 1;
         @Comment("Minimum level before you start getting HP (Exclusive)")
         public int afterLevel = 10;
+        @Comment("Disable feature")
+        public boolean disabled = true;
     }
     
     public static class MiningBuffToggles extends LevelBuffToggles {

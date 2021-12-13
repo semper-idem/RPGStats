@@ -65,13 +65,14 @@ public class RPGStatsClient implements ClientModInitializer {
         openGUIKeybind = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.rpgstats.open_gui",
             InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_UNKNOWN,
+            GLFW.GLFW_KEY_RIGHT_BRACKET,
             "category.rpgstats.keybinds"
         ));
         
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openGUIKeybind.wasPressed()) {
                 if (client.currentScreen == null) {
+
                     client.setScreen(new RPGStatDisplayScreen(new RPGStatDisplayGUI()));
                 }
             }
